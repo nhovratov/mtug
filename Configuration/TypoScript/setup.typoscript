@@ -1,0 +1,19 @@
+page = PAGE
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = Default
+
+        templateRootPaths.0 = EXT:sitepackage/Resources/Private/Page/Templates/
+        partialRootPaths.0 = EXT:sitepackage/Resources/Private/Page/Partials/
+        layoutRootPaths.0 = EXT:sitepackage/Resources/Private/Page/Layouts/
+
+        settings {
+
+        }
+
+        variables {
+            content < styles.content.get
+        }
+    }
+}

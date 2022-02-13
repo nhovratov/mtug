@@ -1,0 +1,2 @@
+# Page TSConfig
+@import 'EXT:sitepackage/Configuration/TSConfig/Page/BackendLayouts/*.tsconfig'
