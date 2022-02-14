@@ -1,0 +1,511 @@
+{
+    "sys_file_reference": {
+        "elements": [],
+        "sql": {
+            "tx_mask_o": {
+                "sys_file_reference": {
+                    "tx_mask_o": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": [],
+        "palettes": []
+    },
+    "tt_content": {
+        "elements": {
+            "a": {
+                "key": "a",
+                "label": "A",
+                "description": "",
+                "shortLabel": "",
+                "color": "#162dad",
+                "icon": "fa-anchor",
+                "columns": [
+                    "tx_mask_f98ccf94bf6a58",
+                    "tx_mask_d",
+                    "tx_mask_e",
+                    "tx_mask_f",
+                    "tx_mask_g",
+                    "tx_mask_7ee474b74013e8",
+                    "tx_mask_h",
+                    "tx_mask_i",
+                    "tx_mask_j",
+                    "tx_mask_k",
+                    "tx_mask_l",
+                    "tx_mask_m",
+                    "tx_mask_p",
+                    "tx_mask_content"
+                ],
+                "labels": [
+                    "Palette f\u00fcr A und B",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Custom Tab",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Repeater",
+                    ""
+                ],
+                "descriptions": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "sorting": 1
+            },
+            "b": {
+                "key": "b",
+                "label": "B",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "",
+                "columns": [
+                    "header",
+                    "tx_mask_a"
+                ],
+                "labels": [
+                    "",
+                    "Feld A"
+                ],
+                "descriptions": [
+                    "",
+                    ""
+                ],
+                "sorting": 2
+            }
+        },
+        "sql": {
+            "tx_mask_a": {
+                "tt_content": {
+                    "tx_mask_a": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_b": {
+                "tt_content": {
+                    "tx_mask_b": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_c": {
+                "tt_content": {
+                    "tx_mask_c": "float DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_content": {
+                "tt_content": {
+                    "tx_mask_content": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_d": {
+                "tt_content": {
+                    "tx_mask_d": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_e": {
+                "tt_content": {
+                    "tx_mask_e": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_f": {
+                "tt_content": {
+                    "tx_mask_f": "mediumtext"
+                }
+            },
+            "tx_mask_g": {
+                "tt_content": {
+                    "tx_mask_g": "mediumtext"
+                }
+            },
+            "tx_mask_h": {
+                "tt_content": {
+                    "tx_mask_h": "date"
+                }
+            },
+            "tx_mask_i": {
+                "tt_content": {
+                    "tx_mask_i": "datetime"
+                }
+            },
+            "tx_mask_j": {
+                "tt_content": {
+                    "tx_mask_j": "int(10) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_k": {
+                "tt_content": {
+                    "tx_mask_k": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_l": {
+                "tt_content": {
+                    "tx_mask_l": "int(11) DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_m": {
+                "tt_content": {
+                    "tx_mask_m": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_p": {
+                "tt_content": {
+                    "tx_mask_p": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "header": {
+                "coreField": 1,
+                "key": "header",
+                "fullKey": "header",
+                "type": "string"
+            },
+            "tx_mask_7ee474b74013e8": {
+                "config": {
+                    "type": "tab"
+                },
+                "key": "7ee474b74013e8",
+                "fullKey": "tx_mask_7ee474b74013e8",
+                "type": "tab"
+            },
+            "tx_mask_a": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "key": "a",
+                "fullKey": "tx_mask_a",
+                "type": "string",
+                "inPalette": 1,
+                "inlineParent": {
+                    "a": "tx_mask_f98ccf94bf6a58"
+                },
+                "label": {
+                    "a": "Feld A"
+                },
+                "description": {
+                    "a": ""
+                },
+                "order": {
+                    "a": 1
+                }
+            },
+            "tx_mask_b": {
+                "config": {
+                    "eval": "int",
+                    "type": "input"
+                },
+                "key": "b",
+                "fullKey": "tx_mask_b",
+                "type": "integer",
+                "inPalette": 1,
+                "inlineParent": {
+                    "a": "tx_mask_f98ccf94bf6a58"
+                },
+                "label": {
+                    "a": ""
+                },
+                "description": {
+                    "a": ""
+                },
+                "order": {
+                    "a": 2
+                }
+            },
+            "tx_mask_c": {
+                "config": {
+                    "eval": "double2",
+                    "type": "input"
+                },
+                "key": "c",
+                "fullKey": "tx_mask_c",
+                "type": "float",
+                "inPalette": 1,
+                "inlineParent": {
+                    "a": "tx_mask_f98ccf94bf6a58"
+                },
+                "label": {
+                    "a": ""
+                },
+                "description": {
+                    "a": ""
+                },
+                "order": {
+                    "a": 4
+                }
+            },
+            "tx_mask_content": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1,
+                        "useSortable": 1
+                    },
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "tt_content",
+                    "overrideChildTca": {
+                        "columns": {
+                            "colPos": {
+                                "config": {
+                                    "default": 999
+                                }
+                            }
+                        }
+                    },
+                    "type": "inline"
+                },
+                "key": "content",
+                "fullKey": "tx_mask_content",
+                "type": "content",
+                "cTypes": [
+                    "textmedia"
+                ]
+            },
+            "tx_mask_d": {
+                "config": {
+                    "renderType": "inputLink",
+                    "softref": "typolink",
+                    "type": "input"
+                },
+                "key": "d",
+                "fullKey": "tx_mask_d",
+                "type": "link"
+            },
+            "tx_mask_dbc0a4b467a078": {
+                "config": {
+                    "type": "linebreak"
+                },
+                "key": "dbc0a4b467a078",
+                "fullKey": "tx_mask_dbc0a4b467a078",
+                "type": "linebreak",
+                "inPalette": 1,
+                "inlineParent": {
+                    "a": "tx_mask_f98ccf94bf6a58"
+                },
+                "label": {
+                    "a": ""
+                },
+                "description": {
+                    "a": ""
+                },
+                "order": {
+                    "a": 3
+                }
+            },
+            "tx_mask_e": {
+                "config": {
+                    "default": "#8f2222",
+                    "renderType": "colorpicker",
+                    "size": 10,
+                    "type": "input"
+                },
+                "key": "e",
+                "fullKey": "tx_mask_e",
+                "type": "colorpicker"
+            },
+            "tx_mask_f": {
+                "config": {
+                    "type": "text",
+                    "wrap": "virtual"
+                },
+                "key": "f",
+                "fullKey": "tx_mask_f",
+                "type": "text"
+            },
+            "tx_mask_f98ccf94bf6a58": {
+                "config": {
+                    "type": "palette"
+                },
+                "key": "f98ccf94bf6a58",
+                "fullKey": "tx_mask_f98ccf94bf6a58",
+                "type": "palette"
+            },
+            "tx_mask_g": {
+                "config": {
+                    "enableRichtext": 1,
+                    "type": "text"
+                },
+                "key": "g",
+                "fullKey": "tx_mask_g",
+                "type": "richtext"
+            },
+            "tx_mask_h": {
+                "config": {
+                    "dbType": "date",
+                    "eval": "date",
+                    "renderType": "inputDateTime",
+                    "type": "input"
+                },
+                "key": "h",
+                "fullKey": "tx_mask_h",
+                "type": "date"
+            },
+            "tx_mask_i": {
+                "config": {
+                    "dbType": "datetime",
+                    "eval": "datetime",
+                    "renderType": "inputDateTime",
+                    "type": "input"
+                },
+                "key": "i",
+                "fullKey": "tx_mask_i",
+                "type": "datetime"
+            },
+            "tx_mask_j": {
+                "config": {
+                    "eval": "date,int",
+                    "renderType": "inputDateTime",
+                    "type": "input"
+                },
+                "key": "j",
+                "fullKey": "tx_mask_j",
+                "type": "timestamp"
+            },
+            "tx_mask_k": {
+                "config": {
+                    "type": "check"
+                },
+                "key": "k",
+                "fullKey": "tx_mask_k",
+                "type": "check"
+            },
+            "tx_mask_l": {
+                "config": {
+                    "items": [
+                        [
+                            "Option1",
+                            "1"
+                        ],
+                        [
+                            "Option2",
+                            "2"
+                        ]
+                    ],
+                    "type": "radio"
+                },
+                "key": "l",
+                "fullKey": "tx_mask_l",
+                "type": "radio"
+            },
+            "tx_mask_m": {
+                "config": {
+                    "renderType": "selectSingle",
+                    "type": "select"
+                },
+                "key": "m",
+                "fullKey": "tx_mask_m",
+                "type": "select"
+            },
+            "tx_mask_p": {
+                "config": {
+                    "appearance": {
+                        "collapseAll": 1,
+                        "enabledControls": {
+                            "dragdrop": 1
+                        },
+                        "levelLinksPosition": "top",
+                        "showAllLocalizationLink": 1,
+                        "showPossibleLocalizationRecords": 1
+                    },
+                    "foreign_field": "parentid",
+                    "foreign_sortby": "sorting",
+                    "foreign_table": "--inlinetable--",
+                    "foreign_table_field": "parenttable",
+                    "type": "inline"
+                },
+                "key": "p",
+                "fullKey": "tx_mask_p",
+                "type": "inline"
+            }
+        },
+        "palettes": {
+            "tx_mask_f98ccf94bf6a58": {
+                "label": "Palette f\u00fcr A und B",
+                "description": "",
+                "showitem": [
+                    "tx_mask_a",
+                    "tx_mask_b",
+                    "tx_mask_dbc0a4b467a078",
+                    "tx_mask_c"
+                ]
+            }
+        }
+    },
+    "tx_mask_p": {
+        "elements": [],
+        "sql": {
+            "tx_mask_n": {
+                "tx_mask_p": {
+                    "tx_mask_n": "text"
+                }
+            },
+            "tx_mask_o": {
+                "tx_mask_p": {
+                    "tx_mask_o": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_n": {
+                "config": {
+                    "allowed": "pages",
+                    "fieldControl": {
+                        "addRecord": {
+                            "disabled": 1
+                        },
+                        "editPopup": {
+                            "disabled": 1
+                        },
+                        "listModule": {
+                            "disabled": 1
+                        }
+                    },
+                    "internal_type": "db",
+                    "type": "group"
+                },
+                "key": "n",
+                "fullKey": "tx_mask_n",
+                "type": "group",
+                "inlineParent": "tx_mask_p",
+                "order": 1
+            },
+            "tx_mask_o": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "type": "inline"
+                },
+                "key": "o",
+                "fullKey": "tx_mask_o",
+                "type": "file",
+                "imageoverlayPalette": 1,
+                "inlineParent": "tx_mask_p",
+                "order": 2
+            }
+        },
+        "palettes": []
+    }
+}
