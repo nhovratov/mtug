@@ -1,0 +1,65 @@
+{
+    "tt_content": {
+        "elements": {
+            "b": {
+                "key": "b",
+                "label": "B",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "",
+                "columns": [
+                    "header",
+                    "tx_mask_a"
+                ],
+                "labels": [
+                    "",
+                    "Feld A"
+                ],
+                "descriptions": [
+                    "",
+                    ""
+                ],
+                "sorting": 2
+            }
+        },
+        "sql": {
+            "tx_mask_a": {
+                "tt_content": {
+                    "tx_mask_a": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "header": {
+                "coreField": 1,
+                "key": "header",
+                "fullKey": "header",
+                "type": "string"
+            },
+            "tx_mask_a": {
+                "config": {
+                    "eval": "required",
+                    "type": "input"
+                },
+                "key": "a",
+                "fullKey": "tx_mask_a",
+                "type": "string",
+                "inPalette": 1,
+                "inlineParent": {
+                    "a": "tx_mask_f98ccf94bf6a58"
+                },
+                "label": {
+                    "a": "Feld A"
+                },
+                "description": {
+                    "a": ""
+                },
+                "order": {
+                    "a": 1
+                }
+            }
+        },
+        "palettes": []
+    }
+}

@@ -1,48 +1,78 @@
 {
+    "tx_mask_p": {
+        "elements": [],
+        "sql": {
+            "tx_mask_a": {
+                "tx_mask_p": {
+                    "tx_mask_a": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_n": {
+                "tx_mask_p": {
+                    "tx_mask_n": "text"
+                }
+            },
+            "tx_mask_o": {
+                "tx_mask_p": {
+                    "tx_mask_o": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_a": {
+                "config": {
+                    "type": "input"
+                },
+                "label": "A",
+                "key": "a",
+                "fullKey": "tx_mask_a",
+                "type": "string",
+                "inlineParent": "tx_mask_p",
+                "order": 1
+            },
+            "tx_mask_n": {
+                "config": {
+                    "allowed": "pages",
+                    "fieldControl": {
+                        "addRecord": {
+                            "disabled": 1
+                        },
+                        "editPopup": {
+                            "disabled": 1
+                        },
+                        "listModule": {
+                            "disabled": 1
+                        }
+                    },
+                    "internal_type": "db",
+                    "type": "group"
+                },
+                "key": "n",
+                "fullKey": "tx_mask_n",
+                "type": "group",
+                "inlineParent": "tx_mask_p",
+                "order": 2
+            },
+            "tx_mask_o": {
+                "config": {
+                    "appearance": {
+                        "fileUploadAllowed": 1
+                    },
+                    "foreign_table": "sys_file_reference",
+                    "type": "inline"
+                },
+                "key": "o",
+                "fullKey": "tx_mask_o",
+                "type": "file",
+                "imageoverlayPalette": 1,
+                "inlineParent": "tx_mask_p",
+                "order": 3
+            }
+        },
+        "palettes": []
+    },
     "tt_content": {
         "elements": {
-            "product": {
-                "key": "product",
-                "label": "Produkt",
-                "description": "",
-                "shortLabel": "",
-                "color": "#000000",
-                "icon": "",
-                "columns": [
-                    "tx_mask_title",
-                    "tx_mask_price"
-                ],
-                "labels": [
-                    "Titel",
-                    "Preis"
-                ],
-                "descriptions": [
-                    "",
-                    ""
-                ],
-                "sorting": 3
-            },
-            "b": {
-                "key": "b",
-                "label": "B",
-                "description": "",
-                "shortLabel": "",
-                "color": "#000000",
-                "icon": "",
-                "columns": [
-                    "header",
-                    "tx_mask_a"
-                ],
-                "labels": [
-                    "",
-                    "Feld A"
-                ],
-                "descriptions": [
-                    "",
-                    ""
-                ],
-                "sorting": 2
-            },
             "a": {
                 "key": "a",
                 "label": "A",
@@ -51,6 +81,7 @@
                 "color": "#162dad",
                 "icon": "fa-anchor",
                 "columns": [
+                    "header",
                     "tx_mask_f98ccf94bf6a58",
                     "tx_mask_d",
                     "tx_mask_e",
@@ -67,6 +98,7 @@
                     "tx_mask_content"
                 ],
                 "labels": [
+                    "",
                     "Palette f\u00fcr A und B",
                     "",
                     "",
@@ -84,6 +116,7 @@
                 ],
                 "descriptions": [
                     "",
+                    "Paletten Description",
                     "",
                     "",
                     "",
@@ -102,16 +135,6 @@
             }
         },
         "sql": {
-            "tx_mask_title": {
-                "tt_content": {
-                    "tx_mask_title": "varchar(255) DEFAULT '' NOT NULL"
-                }
-            },
-            "tx_mask_price": {
-                "tt_content": {
-                    "tx_mask_price": "float DEFAULT '0' NOT NULL"
-                }
-            },
             "tx_mask_a": {
                 "tt_content": {
                     "tx_mask_a": "varchar(255) DEFAULT '' NOT NULL"
@@ -189,28 +212,19 @@
             }
         },
         "tca": {
-            "tx_mask_title": {
-                "config": {
-                    "type": "input"
-                },
-                "key": "title",
-                "fullKey": "tx_mask_title",
-                "type": "string"
-            },
-            "tx_mask_price": {
-                "config": {
-                    "eval": "double2",
-                    "type": "input"
-                },
-                "key": "price",
-                "fullKey": "tx_mask_price",
-                "type": "float"
-            },
             "header": {
                 "coreField": 1,
                 "key": "header",
                 "fullKey": "header",
                 "type": "string"
+            },
+            "tx_mask_f98ccf94bf6a58": {
+                "config": {
+                    "type": "palette"
+                },
+                "key": "f98ccf94bf6a58",
+                "fullKey": "tx_mask_f98ccf94bf6a58",
+                "type": "palette"
             },
             "tx_mask_a": {
                 "config": {
@@ -233,14 +247,6 @@
                 "order": {
                     "a": 1
                 }
-            },
-            "tx_mask_f98ccf94bf6a58": {
-                "config": {
-                    "type": "palette"
-                },
-                "key": "f98ccf94bf6a58",
-                "fullKey": "tx_mask_f98ccf94bf6a58",
-                "type": "palette"
             },
             "tx_mask_b": {
                 "config": {
@@ -478,7 +484,7 @@
         "palettes": {
             "tx_mask_f98ccf94bf6a58": {
                 "label": "Palette f\u00fcr A und B",
-                "description": "",
+                "description": "Paletten Description",
                 "showitem": [
                     "tx_mask_a",
                     "tx_mask_b",
@@ -487,117 +493,5 @@
                 ]
             }
         }
-    },
-    "tx_mask_p": {
-        "elements": [],
-        "sql": {
-            "tx_mask_a": {
-                "tx_mask_p": {
-                    "tx_mask_a": "varchar(255) DEFAULT '' NOT NULL"
-                }
-            },
-            "tx_mask_n": {
-                "tx_mask_p": {
-                    "tx_mask_n": "text"
-                }
-            },
-            "tx_mask_o": {
-                "tx_mask_p": {
-                    "tx_mask_o": "int(11) unsigned DEFAULT '0' NOT NULL"
-                }
-            }
-        },
-        "tca": {
-            "tx_mask_a": {
-                "config": {
-                    "type": "input"
-                },
-                "label": "A",
-                "key": "a",
-                "fullKey": "tx_mask_a",
-                "type": "string",
-                "inlineParent": "tx_mask_p",
-                "order": 1
-            },
-            "tx_mask_n": {
-                "config": {
-                    "allowed": "pages",
-                    "fieldControl": {
-                        "addRecord": {
-                            "disabled": 1
-                        },
-                        "editPopup": {
-                            "disabled": 1
-                        },
-                        "listModule": {
-                            "disabled": 1
-                        }
-                    },
-                    "internal_type": "db",
-                    "type": "group"
-                },
-                "key": "n",
-                "fullKey": "tx_mask_n",
-                "type": "group",
-                "inlineParent": "tx_mask_p",
-                "order": 2
-            },
-            "tx_mask_o": {
-                "config": {
-                    "appearance": {
-                        "fileUploadAllowed": 1
-                    },
-                    "foreign_table": "sys_file_reference",
-                    "type": "inline"
-                },
-                "key": "o",
-                "fullKey": "tx_mask_o",
-                "type": "file",
-                "imageoverlayPalette": 1,
-                "inlineParent": "tx_mask_p",
-                "order": 3
-            }
-        },
-        "palettes": []
-    },
-    "pages": {
-        "elements": {
-            "default": {
-                "key": "default",
-                "label": "",
-                "description": "",
-                "shortLabel": "",
-                "color": "",
-                "icon": "",
-                "columns": [
-                    "tx_mask_page_field"
-                ],
-                "labels": [
-                    "Page Field"
-                ],
-                "descriptions": [
-                    ""
-                ],
-                "sorting": 0
-            }
-        },
-        "sql": {
-            "tx_mask_page_field": {
-                "pages": {
-                    "tx_mask_page_field": "varchar(255) DEFAULT '' NOT NULL"
-                }
-            }
-        },
-        "tca": {
-            "tx_mask_page_field": {
-                "config": {
-                    "type": "input"
-                },
-                "key": "page_field",
-                "fullKey": "tx_mask_page_field",
-                "type": "string"
-            }
-        },
-        "palettes": []
     }
 }

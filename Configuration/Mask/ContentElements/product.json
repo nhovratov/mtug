@@ -1,0 +1,59 @@
+{
+    "tt_content": {
+        "elements": {
+            "product": {
+                "key": "product",
+                "label": "Produkt",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "",
+                "columns": [
+                    "tx_mask_title",
+                    "tx_mask_price"
+                ],
+                "labels": [
+                    "Titel",
+                    "Preis"
+                ],
+                "descriptions": [
+                    "",
+                    ""
+                ],
+                "sorting": 3
+            }
+        },
+        "sql": {
+            "tx_mask_title": {
+                "tt_content": {
+                    "tx_mask_title": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
+            "tx_mask_price": {
+                "tt_content": {
+                    "tx_mask_price": "float DEFAULT '0' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_title": {
+                "config": {
+                    "type": "input"
+                },
+                "key": "title",
+                "fullKey": "tx_mask_title",
+                "type": "string"
+            },
+            "tx_mask_price": {
+                "config": {
+                    "eval": "double2",
+                    "type": "input"
+                },
+                "key": "price",
+                "fullKey": "tx_mask_price",
+                "type": "float"
+            }
+        },
+        "palettes": []
+    }
+}
