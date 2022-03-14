@@ -1,0 +1,7 @@
+<f:if condition="{data.tx_mask_title}">
+    {data.tx_mask_title}
+</f:if>
+<f:if condition="{data.tx_mask_price}">
+    {data.tx_mask_price -> f:format.number(decimals: '2', decimalSeparator: ',', thousandsSeparator: '.')}
+</f:if>
+Brutto Preis: {data.priceGross -> f:format.number(decimals: '2', decimalSeparator: ',', thousandsSeparator: '.')}

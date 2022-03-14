@@ -1,55 +1,62 @@
-<f:if condition="{data.tx_mask_a}">
-    {data.tx_mask_a}
-</f:if>
-<f:if condition="{data.tx_mask_b}">
-    {data.tx_mask_b}
-</f:if>
-<f:if condition="{data.tx_mask_c}">
-    {data.tx_mask_c -> f:format.number(decimals: '2', decimalSeparator: ',', thousandsSeparator: '.')}
-</f:if>
-<f:if condition="{data.tx_mask_d}">
-    <f:link.typolink parameter="{data.tx_mask_d}"></f:link.typolink>
-</f:if>
-<f:if condition="{data.tx_mask_e}">
-    {data.tx_mask_e}
-</f:if>
-<f:if condition="{data.tx_mask_f}">
-    {data.tx_mask_f -> f:format.nl2br()}
-</f:if>
-<f:if condition="{data.tx_mask_g}">
-    {data.tx_mask_g -> f:format.html()}
-</f:if>
-<f:if condition="{data.tx_mask_h}">
-    {data.tx_mask_h -> f:format.date(format: 'd.m.Y')}
-</f:if>
-<f:if condition="{data.tx_mask_i}">
-    {data.tx_mask_i -> f:format.date(format: 'd.m.Y - H:i:s')}
-</f:if>
-<f:if condition="{data.tx_mask_j}">
-    {data.tx_mask_j -> f:format.date(format: 'd.m.Y')}
-</f:if>
-<f:variable name="k" value="{data.tx_mask_k}"/>
-<f:variable name="l" value="{data.tx_mask_l}"/>
-<f:variable name="m" value="{data.tx_mask_m}"/>
-<f:if condition="{data.tx_mask_p}">
-    <ul>
-        <f:for each="{data.tx_mask_p}" as="data_item">
-            <li>
-                <f:for each="{data_item.tx_mask_n_items}" as="data_item_item">
-                    <div>{data_item_item.uid}</div>
-                </f:for>
-                <f:if condition="{data_item.tx_mask_o}">
-                    <f:for each="{data_item.tx_mask_o}" as="file">
-                        <f:image image="{file}" width="200" />
-                        {file.description}
+<f:layout/>
+
+<f:section name="Header"/>
+
+<f:section name="Main">
+    <f:if condition="{data.tx_mask_a}">
+        {data.tx_mask_a}
+    </f:if>
+    <f:if condition="{data.tx_mask_b}">
+        {data.tx_mask_b}
+    </f:if>
+    <f:if condition="{data.tx_mask_c}">
+        {data.tx_mask_c -> f:format.number(decimals: '2', decimalSeparator: ',', thousandsSeparator: '.')}
+    </f:if>
+    <f:if condition="{data.tx_mask_d}">
+        <f:link.typolink parameter="{data.tx_mask_d}"></f:link.typolink>
+    </f:if>
+    <f:if condition="{data.tx_mask_e}">
+        {data.tx_mask_e}
+    </f:if>
+    <f:if condition="{data.tx_mask_f}">
+        {data.tx_mask_f -> f:format.nl2br()}
+    </f:if>
+    <f:if condition="{data.tx_mask_g}">
+        {data.tx_mask_g -> f:format.html()}
+    </f:if>
+    <f:if condition="{data.tx_mask_h}">
+        {data.tx_mask_h -> f:format.date(format: 'd.m.Y')}
+    </f:if>
+    <f:if condition="{data.tx_mask_i}">
+        {data.tx_mask_i -> f:format.date(format: 'd.m.Y - H:i:s')}
+    </f:if>
+    <f:if condition="{data.tx_mask_j}">
+        {data.tx_mask_j -> f:format.date(format: 'd.m.Y')}
+    </f:if>
+    <f:variable name="k" value="{data.tx_mask_k}"/>
+    <f:variable name="l" value="{data.tx_mask_l}"/>
+    <f:variable name="m" value="{data.tx_mask_m}"/>
+    <f:if condition="{data.tx_mask_p}">
+        <ul>
+            <f:for each="{data.tx_mask_p}" as="data_item">
+                <li>
+                    <f:for each="{data_item.tx_mask_n_items}" as="data_item_item">
+                        <div>{data_item_item.uid}</div>
                     </f:for>
-                </f:if>
-            </li>
+                    <f:if condition="{data_item.tx_mask_o}">
+                        <f:for each="{data_item.tx_mask_o}" as="file">
+                            <f:image image="{file}" width="200" />
+                            {file.description}
+                        </f:for>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+    <f:if condition="{data.tx_mask_content}">
+        <f:for each="{data.tx_mask_content}" as="data_item">
+            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
         </f:for>
-    </ul>
-</f:if>
-<f:if condition="{data.tx_mask_content}">
-    <f:for each="{data.tx_mask_content}" as="data_item">
-        <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
-    </f:for>
-</f:if>
+    </f:if>
+
+</f:section>

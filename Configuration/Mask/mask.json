@@ -130,6 +130,27 @@
                     ""
                 ],
                 "sorting": 2
+            },
+            "product": {
+                "key": "product",
+                "label": "Produkt",
+                "description": "",
+                "shortLabel": "",
+                "color": "#000000",
+                "icon": "",
+                "columns": [
+                    "tx_mask_title",
+                    "tx_mask_price"
+                ],
+                "labels": [
+                    "Titel",
+                    "Preis"
+                ],
+                "descriptions": [
+                    "",
+                    ""
+                ],
+                "sorting": 3
             }
         },
         "sql": {
@@ -206,6 +227,16 @@
             "tx_mask_p": {
                 "tt_content": {
                     "tx_mask_p": "int(11) unsigned DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_price": {
+                "tt_content": {
+                    "tx_mask_price": "float DEFAULT '0' NOT NULL"
+                }
+            },
+            "tx_mask_title": {
+                "tt_content": {
+                    "tx_mask_title": "varchar(255) DEFAULT '' NOT NULL"
                 }
             }
         },
@@ -477,6 +508,23 @@
                 "key": "p",
                 "fullKey": "tx_mask_p",
                 "type": "inline"
+            },
+            "tx_mask_price": {
+                "config": {
+                    "eval": "double2",
+                    "type": "input"
+                },
+                "key": "price",
+                "fullKey": "tx_mask_price",
+                "type": "float"
+            },
+            "tx_mask_title": {
+                "config": {
+                    "type": "input"
+                },
+                "key": "title",
+                "fullKey": "tx_mask_title",
+                "type": "string"
             }
         },
         "palettes": {
@@ -495,6 +543,11 @@
     "tx_mask_p": {
         "elements": [],
         "sql": {
+            "tx_mask_a": {
+                "tx_mask_p": {
+                    "tx_mask_a": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            },
             "tx_mask_n": {
                 "tx_mask_p": {
                     "tx_mask_n": "text"
@@ -507,6 +560,17 @@
             }
         },
         "tca": {
+            "tx_mask_a": {
+                "config": {
+                    "type": "input"
+                },
+                "label": "A",
+                "key": "a",
+                "fullKey": "tx_mask_a",
+                "type": "string",
+                "inlineParent": "tx_mask_p",
+                "order": 1
+            },
             "tx_mask_n": {
                 "config": {
                     "allowed": "pages",
@@ -528,7 +592,7 @@
                 "fullKey": "tx_mask_n",
                 "type": "group",
                 "inlineParent": "tx_mask_p",
-                "order": 1
+                "order": 2
             },
             "tx_mask_o": {
                 "config": {
@@ -543,7 +607,7 @@
                 "type": "file",
                 "imageoverlayPalette": 1,
                 "inlineParent": "tx_mask_p",
-                "order": 2
+                "order": 3
             }
         },
         "palettes": []

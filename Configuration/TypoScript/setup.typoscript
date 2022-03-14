@@ -27,6 +27,11 @@ lib.maskContentElement {
             pidInList = 0
             as = pageRecord
         }
+
+        120 = Mask\Sitepackage\DataProcessing\VatProcessor
+        120 {
+            vat = 19
+        }
     }
 
     variables {
@@ -44,4 +49,9 @@ lib.maskContentElement {
             }
         }
     }
+
+    partialRootPaths.0 < lib.contentElement.partialRootPaths.0
+    layoutRootPaths.0 < lib.contentElement.layoutRootPaths.0
+
+    settings < lib.contentElement.settings
 }
