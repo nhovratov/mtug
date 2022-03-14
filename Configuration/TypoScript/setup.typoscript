@@ -19,6 +19,7 @@ page {
 }
 
 lib.maskContentElement {
+#tt_content.mask_product { # Um nur ein spezielles Element anzusprechen
     dataProcessing {
         110 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
         110 {
