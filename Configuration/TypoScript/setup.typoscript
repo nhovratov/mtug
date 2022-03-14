@@ -17,3 +17,31 @@ page {
         }
     }
 }
+
+lib.maskContentElement {
+    dataProcessing {
+        110 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        110 {
+            table = pages
+            uidInList.data = page:uid
+            pidInList = 0
+            as = pageRecord
+        }
+    }
+
+    variables {
+        test = CONTENT
+        test {
+            table = pages
+            select {
+                uidInList.data = page:uid
+                pidInList = 0
+            }
+
+            renderObj = TEXT
+            renderObj {
+                value.field = tx_mask_page_field
+            }
+        }
+    }
+}

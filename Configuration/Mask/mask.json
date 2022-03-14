@@ -1,4 +1,44 @@
 {
+    "pages": {
+        "elements": {
+            "default": {
+                "key": "default",
+                "label": "",
+                "description": "",
+                "shortLabel": "",
+                "color": "",
+                "icon": "",
+                "columns": [
+                    "tx_mask_page_field"
+                ],
+                "labels": [
+                    "Page Field"
+                ],
+                "descriptions": [
+                    ""
+                ],
+                "sorting": 0
+            }
+        },
+        "sql": {
+            "tx_mask_page_field": {
+                "pages": {
+                    "tx_mask_page_field": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "tx_mask_page_field": {
+                "config": {
+                    "type": "input"
+                },
+                "key": "page_field",
+                "fullKey": "tx_mask_page_field",
+                "type": "string"
+            }
+        },
+        "palettes": []
+    },
     "sys_file_reference": {
         "elements": [],
         "sql": {
